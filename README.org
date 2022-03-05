@@ -1,6 +1,6 @@
-* pasp-mode
+* clingo-mode
 
-A major mode for editing [[https://potassco.org/][Potassco]] Answer Set Programs files (`.lp`).  
+A major mode for editing [[https://potassco.org/][Potassco]] Answer Set Programs files (~.lp~).
 
 From the Potassco website:  
 #+begin_quote
@@ -16,44 +16,44 @@ Answer Set Programming (ASP) offers a simple and powerful modeling language to s
 
 *** Keybindings
 
-- `C-c C-b` Call clingo with the current buffer
-- `C-c C-e` Call clingo with the current buffer as encoding and some user provided instance
-- `C-c C-r` Call clingo with the currently selected region
+- ~C-c C-b~ Call clingo with the current buffer
+- ~C-c C-e~ Call clingo with the current buffer as encoding and some user provided instance
+- ~C-c C-r~ Call clingo with the currently selected region
 
 The above will all prompt for clingo command-line options (e.g., ~-c n=3 -n 0~, etc.).
 
-- `C-c C-c` Comment region
-- `C-c C-u` Uncomment region
+- ~C-c C-c~ Comment region
+- ~C-c C-u~ Uncomment region
 
 ** Installation
 
 *** Melpa
 
-#+BEGIN_QUOTE
-n.b.: The version of pasp-mode available on MELPA is the upstream [[https://github.com/santifa/pasp-mode][santifa]] pasp-mode.  This, Llaisdy, version is not yet available on MELPA.
-#+END_QUOTE
+~clingo-mode~ is available through the [[MELPA][https://github.com/melpa/melpa]] repository.
+This is the recommended way to install.
 
-The Potassco ASP mode is available through the [MELPA][] repository.
-This is the recommended way to install the `pasp-mode`.
+You can either install ~clingo-mode~ by hand with:
 
-You can either install `pasp-mode` by hand with:
-<kbd> M-x package-install [RET] pasp-mode [RET]</kbd>
+#+begin_src lisp
+M-x package-install [RET] clingo-mode [RET]
+#+end_src
 
 or place the following snippet into your Emacs init file:
-```el
-(unless (package-installed-p 'pasp-mode)
+
+#+begin_src lisp
+(unless (package-installed-p 'clingo-mode)
   (package-refresh-contents)
-  (package-install 'pasp-mode))
-```
+  (package-install 'clingo-mode))
+#+end_src
 
 *** Manually
 
-Download the `pasp-mode.el` file from this repository.
-Either put it into your emacs load path and call `(require 'pasp-mode)` 
-in your init file or load it directly with `(load "~/path/to/pasp-mode.el")`
+Download the ~clingo-mode.el~ file from this repository.
+Either put it into your emacs load path and call ~(require 'clingo-mode)~ 
+in your init file or load it directly with ~(load "~/path/to/clingo-mode.el")~
 
-Afterwards opening an `.lp` file triggers `pasp-mode` or
-call <kbd>M-x pasp-mode</kbd> within an open asp file.
+Afterwards opening an ~.lp~ file triggers ~clingo-mode~ or
+call ~M-x clingo-mode~ within an open asp file.
 
 ** todo
 
@@ -74,4 +74,4 @@ Contributions, via issues, ideas and pull requests, are very welcome!
 Copyright (c) 2020 by Ivan Uemlianin \\
 Copyright (c) 2017 by Henrik Jürges
 
-Distributed under the [[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]; type <kbd>C-h C-c</kbd> to view it.
+Distributed under the [[http://www.gnu.org/licenses/gpl-3.0.html][GNU General Public License v3]]; see [[LICENSE.md][LICENSE]] or type ~C-h C-c~ to view it.
