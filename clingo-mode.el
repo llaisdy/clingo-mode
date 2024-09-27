@@ -348,7 +348,7 @@ Argument OPTIONS Options (possibly empty string) sent to clingo."
   (setq-local clingo-last-options options)
   (clingo-echo-clingo
    (buffer-substring-no-properties region-beginning region-end)
-   options))
+   options)))
 
 ;;;###autoload
 (defun clingo-run-buffer (options)
